@@ -1,0 +1,100 @@
+.scroller {
+	overflow: hidden;
+	position: relative;
+}
+
+.scroller-fixed-sm {
+	height: 200px;
+}
+
+.scroller-fixed {
+	height: 340px;
+}
+
+.scroller-fixed-lg {
+	height: 480px;
+}
+
+.scroller .scroller-viewport {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+}
+
+.scroller .scroller-content {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+}
+
+.scroller.scroller-x .scroller-viewport {
+	overflow-x: scroll;
+}
+
+.scroller.scroller-y .scroller-viewport {
+	overflow-y: scroll;
+}
+
+.scroller .scroller-bar-x,
+.scroller .scroller-bar-y {
+	position: absolute;
+	background: #cccccc;
+	background: rgba(204, 204, 204, .3);
+	z-index: 1;
+	opacity: 0;
+}
+
+.scroller .scroller-bar-x {
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 10px;
+}
+
+.scroller.scroller-y .scroller-bar-x {
+	right: 10px;
+}
+
+.scroller .scroller-bar-y {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 10px;
+}
+
+.scroller.scroller-x .scroller-bar-y {
+	bottom: 10px;
+}
+
+.scroller .scroller-bar-x.active,
+.scroller .scroller-bar-y.active {
+	opacity: 1;
+}
+
+.scroller:hover .scroller-bar-x,
+.scroller:hover .scroller-bar-y {
+	opacity: 1;
+}
+
+.scroller .scroller-bar-x.disabled,
+.scroller .scroller-bar-y.disabled,
+.scroller:hover .scroller-bar-x.disabled,
+.scroller:hover .scroller-bar-y.disabled {
+	display: none;
+}
+
+.scroller .scroller-nub {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333333;
+	background: rgba(51, 51, 51, .7);
+	z-index: 2;
+}
